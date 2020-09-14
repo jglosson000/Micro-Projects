@@ -44,7 +44,7 @@ def simple_circle(x, y, radius, color):
     turtle.pencolor(color)
     turtle.fillcolor(color)
     turtle.begin_fill()
-    turtle.circle(radius, None, math.ceil(radius * 7.5))
+    turtle.circle(radius, None, int(math.ceil(radius * 7.5)))
     turtle.end_fill()
 
 
