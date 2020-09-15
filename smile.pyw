@@ -30,9 +30,10 @@ SOFTWARE.
 
 
 import turtle
-import math
+import math # Required to calculate number of polygons in circle
 
 
+# Set a black background and window scale
 turtle.bgcolor('black')
 turtle.setworldcoordinates(-10, -10, 10, 10)
 
@@ -41,6 +42,7 @@ def simple_circle(x, y, radius, color):
     turtle.penup()
     turtle.goto(x, y)
     turtle.pendown()
+    # Pen color and fill color must be set after pendown for some reason
     turtle.pencolor(color)
     turtle.fillcolor(color)
     turtle.begin_fill()
@@ -48,12 +50,13 @@ def simple_circle(x, y, radius, color):
     turtle.end_fill()
 
 
-simple_circle(0, -5, 5, 'white')
-simple_circle(-2, 1, 0.75, 'blue')
-simple_circle(2, 1, 0.75, 'blue')
-simple_circle(0, -1, 0.65, 'green')
+simple_circle(0, -5, 5, 'white')    # Face
+simple_circle(-2, 1, 0.75, 'blue')  # Left Eye
+simple_circle(2, 1, 0.75, 'blue')   # Right Eye
+simple_circle(0, -1, 0.65, 'green') # Nose
 
 
+# Mouth
 turtle.penup()
 turtle.goto(-2.5, -1.5)
 turtle.pendown()
@@ -63,4 +66,5 @@ turtle.right(90)
 turtle.circle(2.5, 180, 10)
 
 
+# Keep window open after we're done
 turtle.done()
